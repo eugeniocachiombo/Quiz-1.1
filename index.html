@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #222;
+            color: orange;
+        }
+
+      
+
+    </style>
+</head>
+<body>
+
+    <form action="">
+
+        <label>Selecione a questão correcta:</label>
+        <h2 id="h2">Pergunta</h2>
+        <input type="radio" name="alt" value="alt1" id="alt1"> <span id="txtAlt1">alt1</span> <br>
+        <input type="radio" name="alt" value="alt2" id="alt2"> <span id="txtAlt2">alt2</span> <br> 
+        <input type="radio" name="alt" value="alt3" id="alt3"> <span id="txtAlt3">alt3</span> <br>
+        <input type="radio" name="alt" value="alt4" id="alt4"> <span id="txtAlt4">alt4</span> <br>
+
+        <input type="button" value="Responder" id="btn">
+    </form>
+
+    
+    <script>
+        //Perguntas
+        let pergunta = [
+            "Qual é o seu nome?",
+            "Qual é a sua idade?"
+        ];
+
+        let alternativas = [
+            ["Eugénio","Génio", "Cachi", "Gp"],
+            [24, 25, 23, 27]
+        ];
+
+        let correcta = [
+        "Eugénio",
+            24
+        ];
+
+        let state = 0;
+        let totalDePerguntas = pergunta.length - 1;
+        
+       let btn = document.querySelector("#btn");
+       let alt = document.getElementsByName("alt");
+       let alt1 = document.querySelector("#alt1");
+       let alt2 = document.querySelector("#alt2");
+       let alt3 = document.querySelector("#alt3");
+       let alt4 = document.querySelector("#alt4");
+
+       let txtAlt1 = document.querySelector("#txtAlt1");
+       let txtAlt2 = document.querySelector("#txtAlt2");
+       let txtAlt3 = document.querySelector("#txtAlt3");
+       let txtAlt4 = document.querySelector("#txtAlt4");
+
+       let h2 = document.querySelector("#h2");
+
+        h2.innerText = pergunta[0];
+        alt1.value = alternativas[0][0];
+        alt2.value = alternativas[0][1];
+        alt3.value = alternativas[0][2];
+        alt4.value = alternativas[0][3];
+
+        txtAlt1.innerText = alternativas[0][0];
+        txtAlt2.innerText = alternativas[0][1];
+        txtAlt3.innerText = alternativas[0][2];
+        txtAlt4.innerText = alternativas[0][3];
+       
+       
+
+       btn.addEventListener("click", ()=>{
+        
+        console.log("Perguntas: "+totalDePerguntas);
+        console.log("Estado: "+state);
+
+        if(state > totalDePerguntas){
+            window.location = "terminou.html";
+        }
+
+        for(i=0; i < alt.length; i++){
+
+            
+
+            if(alt[i].checked){
+
+        if(alt[i].value == correcta[state]){
+        let el = document.createElement("p");
+        el.innerText = "Resposta Certa";
+        document.body.appendChild(el);
+
+        state = state + 1;
+
+        h2.innerText = pergunta[state];
+        alt1.value = alternativas[state][0];
+        alt2.value = alternativas[state][1];
+        alt3.value = alternativas[state][2];
+        alt4.value = alternativas[state][3];
+
+        txtAlt1.innerText = alternativas[state][0];
+        txtAlt2.innerText = alternativas[state][1];
+        txtAlt3.innerText = alternativas[state][2];
+        txtAlt4.innerText = alternativas[state][3];
+
+        
+
+                }else{
+
+        let el = document.createElement("p");
+        el.innerText = "Resposta Errada xxxxxx";
+        document.body.appendChild(el);
+
+        h2.innerText = pergunta[0];
+        alt1.value = alternativas[0][0];
+        alt2.value = alternativas[0][1];
+        alt3.value = alternativas[0][2];
+        alt4.value = alternativas[0][3];
+
+        txtAlt1.innerText = alternativas[0][0];
+        txtAlt2.innerText = alternativas[0][1];
+        txtAlt3.innerText = alternativas[0][2];
+        txtAlt4.innerText = alternativas[0][3];
+                }
+
+        
+            }
+           
+       }
+       })
+    </script>
+</body>
+</html>
