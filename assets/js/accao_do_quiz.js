@@ -1,12 +1,12 @@
 function FimPorAcertos() {
     if (estado == totalDePerguntas) {
-        window.location = "fim.html";
+        window.location = "fim_acertos.html";
     }
 }
 
 function FimPorErros() {
     if (tentativas < 1) {
-        window.location = "fim.html";
+        window.location = "fim_erros.html";
     }
 }
 

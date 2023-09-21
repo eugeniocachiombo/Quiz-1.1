@@ -1,15 +1,15 @@
 //Perguntas
 let pergunta = [
-    "Qual é o seu nome?",
-    "Qual é a sua idade?"
+    "Quem desenvolveu este Quiz?",
+    "Quais linguagens são utilizadas para front-end?"
 ];
 
 let alternativas = [
-    ["Eugénio","Génio", "Cachi", "Gp"],
-    [24, 25, 23, 27]
+    ["Eugénio Cachiombo","Joseph Dias", "Génio Cach", "Bernardo Mutangui"],
+    ["HTML, CSS, TypeScript", "Java, CSS, HTML", "Dart, C#, HTML", "HTML, CSS, JavaScript"]
 ];
 
 let correcta = [
-"Eugénio",
-    24
+    "Eugénio Cachiombo",
+    "HTML, CSS, JavaScript"
 ];
