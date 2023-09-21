@@ -37,7 +37,7 @@ function Errar() {
     let elemento = document.createElement("p");
     elemento.innerText = "Resposta Errada xxxxxx <br>";
     informacao.innerHTML += elemento.innerText;
-    h2.innerText = pergunta[0];
+    h2.innerText = pergunta[estado];
     alt1.value = alternativas[estado][0];
     alt2.value = alternativas[estado][1];
     alt3.value = alternativas[estado][2];
