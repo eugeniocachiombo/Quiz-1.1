@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/fontawesome/css/all6.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all5.css">
+    <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+    <main>
+        <form class="container text-center quiz-form">
+            <div>
+                <h1 class="nome_jogo">Responda Esta!</h1>
+                <hr>
+            </div>
+
+            <div class="container d-flex justify-content-between align-items-center pt-4 mb-4 status-panel">
+                <p class=" fw-bold text-warning">Tentativas: <span id="txtTentativas">0</span></p>
+                <p class=" fw-bold text-warning">Acertos: <span id="txtEstado">0</span></p>
+                <p class=" fw-bold text-warning">Perguntas: <span id="txtPerguntas">0</span></p>
+            </div>
+
+            <div>
+                <h2 id="h2" class="question-text pt-3">Pergunta</h2>
+            </div>
+
+            <div class="pt-4 d-flex justify-content-center options">
+                <div class="form-check d-table ">
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input" style="font-size: x-large;" type="radio" name="alt" value="alt1"
+                            id="alt1">
+                        <label class="form-check-label" for="alt1" id="txtAlt1">O alt1</label>
+                    </div>
+                    <hr style="background: orange; color: orange;" size="5px">
+
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input" style="font-size: x-large;" type="radio" name="alt" value="alt2"
+                            id="alt2">
+                        <label class="form-check-label" for="alt2" id="txtAlt2">O alt2</label>
+                    </div>
+                    <hr style="background: orange; color: orange;" size="5px">
+
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input" style="font-size: x-large;" type="radio" name="alt" value="alt3"
+                            id="alt3">
+                        <label class="form-check-label" for="alt3" id="txtAlt3">O alt3</label>
+                    </div>
+                    <hr style="background: orange; color: orange;" size="5px">
+
+                    <div class="d-flex align-items-center">
+                        <input class="form-check-input" style="font-size: x-large;" type="radio" name="alt" value="alt4"
+                            id="alt4">
+                        <label class="form-check-label" for="alt4" id="txtAlt4">O alt4</label>
+                    </div>
+                    <hr style="background: orange; color: orange;" size="5px">
+                </div> <br>
+
+            </div>
+            <div class=" mb-4">
+                <input style="min-width: 250px;" type="button" class="btn btn-success" value="Responder" id="btn">
+            </div>
+
+            <div id="informacao" class="informacao mt-3">
+                <!-- Contém informações de erros e acertos -->
+            </div>
+        </form>
+
+    </main>
+
+    <script src="assets/js/alerta.js"></script>
+    <script src="assets/js/perguntas.js"></script>
+    <script src="assets/js/declaracao_variaveis.js"></script>
+    <script src="assets/js/inicializar_variaveis.js"></script>
+    <script src="assets/js/accao_do_quiz.js"></script>
+    <script src="assets/js/nome_jogo.js"></script>
+</body>
+
+</html>

@@ -12,65 +12,39 @@
     <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </head>
 
-<body class="bg-dark text-light">
-    <main>
-        <form class="container text-center quiz-form">
+<body class="bg-dark text-light" style="min-height: 100vh;">
+    <main class="d-flex justify-content-center align-items-center" style="min-height: inherit;">
+        <form class="text-center quiz-form">
             <div>
-                <h1 class="nome_jogo">Responda Esta!</h1>
-                <hr>
+                <h1 class="nome_jogo"></h1>
             </div>
 
-            <div class="container d-flex justify-content-between align-items-center pt-4 mb-4 status-panel">
-                <p class=" fw-bold text-warning">Tentativas: <span id="txtTentativas">0</span></p>
-                <p class=" fw-bold text-warning">Acertos: <span id="txtEstado">0</span></p>
-                <p class=" fw-bold text-warning">Perguntas: <span id="txtPerguntas">0</span></p>
-            </div>
+            <button class="btn btn-success">
+                Jogar
+            </button>
 
-            <div>
-                <h2 id="h2" class="question-text pt-3">Pergunta</h2>
-            </div>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#creditoModal">
+                Créditos
+            </button>
 
-            <div class="pt-4 d-flex justify-content-center options">
-                <div class="form-check d-table ">
-                    <div class="d-flex align-items-center">
-                        <input class="form-check-input" style="font-size: x-large;" type="radio" name="alt" value="alt1"
-                            id="alt1">
-                        <label class="form-check-label" for="alt1" id="txtAlt1">O alt1</label>
+            <!-- Modal -->
+            <div class="modal fade" id="creditoModal" tabindex="-1" aria-labelledby="creditoModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header text-dark">
+                            <h5 class="modal-title" id="creditoModalLabel">Créditos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-dark">
+                           <i class="fas fa-info-circle text-warning"></i> Este jogo foi criado por: <br> 
+                           <img src="" alt=""> <b>Rui Vissapa</b> <br>
+                           <img src="" alt=""> <b>Eugénio Cachiombo</b>
+                        </div>
                     </div>
-                    <hr style="background: orange; color: orange;" size="5px">
-
-                    <div class="d-flex align-items-center">
-                        <input class="form-check-input" style="font-size: x-large;" type="radio" name="alt" value="alt2"
-                            id="alt2">
-                        <label class="form-check-label" for="alt2" id="txtAlt2">O alt2</label>
-                    </div>
-                    <hr style="background: orange; color: orange;" size="5px">
-
-                    <div class="d-flex align-items-center">
-                        <input class="form-check-input" style="font-size: x-large;" type="radio" name="alt" value="alt3"
-                            id="alt3">
-                        <label class="form-check-label" for="alt3" id="txtAlt3">O alt3</label>
-                    </div>
-                    <hr style="background: orange; color: orange;" size="5px">
-
-                    <div class="d-flex align-items-center">
-                        <input class="form-check-input" style="font-size: x-large;" type="radio" name="alt" value="alt4"
-                            id="alt4">
-                        <label class="form-check-label" for="alt4" id="txtAlt4">O alt4</label>
-                    </div>
-                    <hr style="background: orange; color: orange;" size="5px">
-                </div> <br>
-
-            </div>
-            <div class=" mb-4">
-                <input style="min-width: 250px;" type="button" class="btn btn-success" value="Responder" id="btn">
-            </div>
-
-            <div id="informacao" class="informacao mt-3">
-                <!-- Contém informações de erros e acertos -->
+                </div>
             </div>
         </form>
-
     </main>
 
     <script src="assets/js/alerta.js"></script>
