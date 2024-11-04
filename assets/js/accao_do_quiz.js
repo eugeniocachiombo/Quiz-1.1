@@ -48,6 +48,8 @@ function Errar() {
     txtAlt3.innerText = alternativas[estadoPergunta[estado]][mudarOrdem[2]];
     txtAlt4.innerText = alternativas[estadoPergunta[estado]][mudarOrdem[3]];
     tentativas -= 1;
+    audio = new Audio('assets/audio/erro.mp3');
+    audio.play();
     Swal.fire({
         icon: "error",
         title: "Resposta Errada",
