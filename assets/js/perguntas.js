@@ -6,7 +6,7 @@ let pergunta = [
     "Quantos filhos tem a Maria Raimundo?",
     "Quantas meninas tem nos filhos da dona Maria Raimundo?",
     "Qual é o primeiro casal de netos da dona Maria?",
-    "Quem diz esse é um sujo?",
+    "Quem diz «Esse é um sujo»?",
     "Quem é o primeiro filho da dona Maria?",
     "Quem faz as pessoas rirem?",
     "Quem é o Engenheiro Informático da família?",
