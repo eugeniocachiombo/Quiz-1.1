@@ -21,13 +21,17 @@
             </div>
 
             <div class="container d-flex justify-content-between align-items-center pt-4 mb-4 status-panel">
-                <p class=" fw-bold text-warning">Tentativas: <span id="txtTentativas">0</span></p>
-                <p class=" fw-bold text-warning">Acertos: <span id="txtEstado">0</span></p>
-                <p class=" fw-bold text-warning">Perguntas: <span id="txtPerguntas">0</span></p>
+                <p class=" fw-bold text-warning"> <i class="fas fa-bullseye text-light"></i> Tentativas: <span id="txtTentativas">0</span></p>
+                <p class=" fw-bold text-warning"> <i class="fas fa-check-circle text-light"></i> Acertos: <span id="txtEstado">0</span></p>
+                <p class=" fw-bold text-warning"> <i class="fas fa-question-circle text-light"></i> Perguntas: <span id="txtPerguntas">0</span></p>
             </div>
 
             <div>
                 <h2 id="h2" class="question-text pt-3">Pergunta</h2>
+            </div>
+
+            <div class="text-warning">
+                Seleccione a opção correcta!
             </div>
 
             <div class="pt-4 d-flex justify-content-center options">
@@ -63,13 +67,16 @@
 
             </div>
             <div class=" mb-4">
-                <input style="min-width: 250px;" type="button" class="btn btn-success" value="Responder" id="btn">
+                <button style="min-width: 250px;" type="button" 
+                class="btn btn-success" value="" id="btn">
+                   <i class="fas fa-reply"></i> Responder
+                </button>
             </div>
 
             <div class=" mb-4">
                 <a href="index.html">
                     <button id="sair" type="button" class="btn btn-danger">
-                        Sair do jogo
+                        <i class="fas fa-times-circle"></i> Sair do jogo
                     </button>
                 </a>
             </div>
@@ -78,9 +85,9 @@
                 <!-- Contém informações de erros e acertos -->
             </div>
         </form>
-
     </main>
 
+    <script src="assets/js/audio_fundo.js"></script>
     <script src="assets/js/alerta.js"></script>
     <script src="assets/js/perguntas.js"></script>
     <script src="assets/js/declaracao_variaveis.js"></script>
