@@ -2,21 +2,75 @@
     padding: 0;
     margin: 0;
 }
-
 body {
-    background-color: #222;
-    color: orange;
-    font-size: 16px;
+    background-color: #343a40;
+    font-family: 'Arial', sans-serif;
 }
 
-#btn{
-    background: orange;
-    color: white;
+h1, h2 {
+    color: #ffffff;
     font-weight: bold;
 }
 
-#btn:hover{
-    background: white;
-    color: orange;
+.quiz-form {
+    background: rgba(0, 119, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.status-panel {
+    background-color: rgba(0, 140, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.informacao {
+    margin-top: 20px;
+    color: #f1adad; 
     font-weight: bold;
 }
+
+@media (max-width: 576px) {
+    .quiz-form {
+        padding: 20px;
+    }
+
+    .status-panel {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.options {
+    width: 100%;
+    max-width: 600px; 
+    margin: auto; 
+    text-align: left; 
+}
+
+.form-check {
+    margin: 10px 0; 
+    display: flex; 
+    align-items: center; 
+}
+
+.form-check-input {
+    margin-right: 10px; 
+}
+
+input[type="radio"] {
+    accent-color: #28a745; 
+}
+

@@ -1,6 +1,8 @@
 let estado;
 let totalDePerguntas;
 let tentativas;
+let mudarOrdem;
+let numAleatorio;
 let txtTentativas = document.querySelector("#txtTentativas");
 let txtEstado = document.querySelector("#txtEstado");
 let txtPerguntas = document.querySelector("#txtPerguntas");
@@ -16,3 +18,4 @@ let txtAlt3 = document.querySelector("#txtAlt3");
 let txtAlt4 = document.querySelector("#txtAlt4");
 let h2 = document.querySelector("#h2");
 let informacao = document.querySelector("#informacao");
+
