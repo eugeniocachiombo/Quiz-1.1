@@ -13,11 +13,32 @@ h1, h2 {
 }
 
 .quiz-form {
-    background: rgba(0, 119, 255, 0.9);
+    position: relative;
+    background-image: url("../img/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
+
+.quiz-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 119, 255, 0.281); /* Ajuste a opacidade aqui */
+    border-radius: 15px; /* Para combinar com o elemento principal */
+    z-index: 1; /* Para garantir que o overlay fique por cima da imagem */
+}
+
+.quiz-form > * {
+    position: relative; /* Para garantir que o conteúdo fique acima do overlay */
+    z-index: 2;
+}
+
 
 .status-panel {
     background-color: rgba(0, 140, 255, 0.9);

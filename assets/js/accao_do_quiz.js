@@ -55,6 +55,7 @@ function Errar() {
         title: "Resposta Errada",
         timer: 2000
     });
+    DesSelecionar();
 }
 
 function Jogar() {
