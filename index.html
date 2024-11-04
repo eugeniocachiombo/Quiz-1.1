@@ -19,13 +19,29 @@
                 <h1 class="nome_jogo"></h1>
             </div>
 
-            <button class="btn btn-success">
-                Jogar
-            </button>
+            <div class="row g-3 flex-column d-flex justify-content-center ">
+                <div class="col mt-5">
+                    <a href="jogo.html">
+                        <button style="min-width: 200px;" type="button" class="btn btn-success">
+                            Jogar
+                        </button>
+                    </a>
+                </div>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#creditoModal">
-                Créditos
-            </button>
+                <div class="col">
+                    <button style="min-width: 200px;" type="button" class="btn btn-info text-light" data-bs-toggle="modal"
+                        data-bs-target="#creditoModal">
+                        Créditos
+                    </button>
+                </div>
+
+                <div class="col d-none">
+                    <button style="min-width: 200px;" id="sair" type="button"
+                        class="btn btn-danger">
+                        Sair do jogo
+                    </button>
+                </div>
+            </div>
 
             <!-- Modal -->
             <div class="modal fade" id="creditoModal" tabindex="-1" aria-labelledby="creditoModalLabel"
@@ -37,9 +53,16 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body text-dark">
-                           <i class="fas fa-info-circle text-warning"></i> Este jogo foi criado por: <br> 
-                           <img src="" alt=""> <b>Rui Vissapa</b> <br>
-                           <img src="" alt=""> <b>Eugénio Cachiombo</b>
+                            <i class="fas fa-info-circle text-warning pb-4"></i> Este jogo foi criado por: <br>
+                            <a href="assets/img/genio.jpg">
+                                <img src="assets/img/genio.jpg" alt="" class="img-fluid border border-dark"
+                                    style="border-radius: 50%; height: 50px; width: 50px;"> <b>Rui Vissapa</b>
+                            </a> <br>
+
+                            <a href="assets/img/genio.jpg">
+                                <img src="assets/img/genio.jpg" alt="" class="img-fluid border border-dark"
+                                    style="border-radius: 50%; height: 50px; width: 50px;"> <b>Eugénio Cachiombo</b>
+                            </a>
                         </div>
                     </div>
                 </div>
